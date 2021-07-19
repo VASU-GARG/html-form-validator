@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>{{ title }}</title>
+   <link rel="stylesheet" href="/views/login.css">
+</head>
+
+<body>
+    <div class="html-form">
+    <form method="POST">
+        <div class="row">
+            <div class="r1c1-div">
+                <p class="heads" >Email</p>
+                <input class="email row1-input form-control"  name="email" type="text" placeholder="Enter your Email" value="{{data.email}}">
+                {% if(err.email %}
+                <p class="err-msg" >{{err.email.msg}}</p>
+                {% endif %}
+            </div>
+            <div class="r1c2-div" name="password">
+                 <p class="heads" >Password</p>
+                <input class="password row1-input form-control" type="password" name="password" placeholder="Enter your password">
+                {% if(err.password %}
+                <p class="err-msg" >{{err.password.msg}}</p>
+                {% endif %}
+            </div>
+            <div class="r1c3-div" name="cpassword">
+                <p class="heads" >Confirm Password</p>
+                <input class="password row1-input form-control" type="password" name="cpassword" placeholder="Confirm your password">
+                {% if (err.cpassword) and (not err.password) %}
+                <p class="err-msg" >{{err.cpassword.msg}}</p>
+                {% endif %}
+            </div>
+        </div>
+           
+        <div class="row">
+            <div class="row2And3-div">
+                <p class="heads" >Address</p>
+                <input class="add form-control" name="add1" type="text" placeholder="Enter your Address" value="{{data.add1}}">
+                {% if(err.add1 %}
+                <p class="err-msg" >{{err.add1.msg}}</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row2And3-div">
+                <p class="heads" >Address2</p>
+                <input class="add form-control" name="add2" type="text"  placeholder="" value="{{data.add2}}">
+                {% if(err.add2 %}
+                <p class="err-msg" >{{err.add2.msg}}</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row"> 
+            <div class="r4c1-div">
+                <p class="heads" >City</p>
+                <input class="city r4 form-control" name="city" type="text" placeholder="Enter your City" value="{{data.city}}">
+                {% if(err.city %}
+                <p class="err-msg" >{{err.city.msg}}</p>
+                {% endif %}
+            </div>
+
+            <div  class="r4c2-div">
+                <p class="heads" >State</p>
+                <input class="state r4 form-control" name="state"  type="text" placeholder="Enter your State" value="{{data.city}}"> 
+                {% if(err.state %}
+                <p class="err-msg" >{{err.state.msg}}</p>
+                {% endif %}
+            </div>
+
+            <div  class="r4c3-div">
+                <p class="heads" >Zip-code</p>
+                <input class="zip-code r4 form-control" name="zipCode" type="number" placeholder="Enter your Pin code" value="{{data.zipCode}}">
+                {% if(err.zipCode %}
+                <p class="err-msg" >{{err.zipCode.msg}}</p>
+                {% endif %}
+            </div>
+        </div>
+        <div  class="submit-button-div">
+        <button class="button">Submit</button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

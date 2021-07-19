@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url('/images/background.png');
+}
+
+::placeholder{
+    color: rgb(255, 255, 255) ;
+    opacity: 0.5 ;
+}
+
+
+.row{
+    margin: 1%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.r1c1-div{
+    width: 45%;
+}
+
+.r1c2-div{
+    width: 25%;
+}
+.r1c3-div{
+    width: 25%;
+}
+
+.row1-input{
+   width: 100%;
+}
+
+
+
+.row2And3-div{
+    width: 100%;
+}
+
+.add{
+    width:100%
+}
+
+
+.r4c1-div{
+    width: 49% ;
+}
+
+.r4c2-div{
+    width: 29%;
+}
+
+.r4c3-div{
+    width: 19%;
+}
+
+.r4{
+    width: 100%;
+}
+
+
+.form-control{
+    background-color: rgb(15, 32, 15) ;
+    border: 1px solid white;
+    height: 45px;
+    border-radius: 0.5em;
+}
+
+
+input
+{
+    color: white;
+}
+
+.heads{
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: large;
+    
+}
+
+
+.err-msg{
+    color: rgb(245, 0, 0);
+}
+
+
+.submit-button-div{
+    margin-top: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    width: 100px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 2em;
+    background-color: red;
+    color:whitesmoke;
+    font-size: large;
+}
